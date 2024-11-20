@@ -13,7 +13,7 @@ public class CustomCalculator {
 
         Calculator mul = (a, b) -> a * b;
 
-        Calculator div = (a, b) -> a / b;
+        Calculator div = (a, b) -> b != 0? a / b : 0;
 
         Calculator mod = (a, b) -> a % b;
 
