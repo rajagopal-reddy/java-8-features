@@ -15,7 +15,7 @@ class Utility{
     public static String convertToUpper(String s){
         return s.toUpperCase();
     }
-    public static void printWithPrefix(String s, String prefix){
+    public void printWithPrefix(String s, String prefix){
         System.out.println(prefix+s);
     }
 }
@@ -29,8 +29,9 @@ public class ReferenceStatic {
                 .toList();
         upper.forEach(System.out::println);
 
+        Utility utility = new Utility();
         String p = "Name: ";
-        names.forEach(name -> Utility.printWithPrefix(name,p));
-        
+        names.forEach(name -> utility.printWithPrefix(name,p));
+
     }
 }
